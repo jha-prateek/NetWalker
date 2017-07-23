@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Crawler.iml" filepath="$PROJECT_DIR$/.idea/Crawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Google_ML/.idea/Google_ML.iml" filepath="$PROJECT_DIR$/../Google_ML/.idea/Google_ML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OpenCV/.idea/OpenCV.iml" filepath="$PROJECT_DIR$/../OpenCV/.idea/OpenCV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TimePass/.idea/TimePass.iml" filepath="$PROJECT_DIR$/../TimePass/.idea/TimePass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Web/.idea/Web.iml" filepath="$PROJECT_DIR$/../Web/.idea/Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../helloWorld/.idea/helloWorld.iml" filepath="$PROJECT_DIR$/../helloWorld/.idea/helloWorld.iml" />
+    </modules>
+  </component>
+</project>
