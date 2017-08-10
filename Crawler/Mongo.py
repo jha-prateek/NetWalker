@@ -24,7 +24,7 @@ class Database(object):
                 self.linkList.insert_one(linksD)
 
         post = {"URL": curURL,
-                "Headings": heading,
+                "Contents": heading,
                 "TotaLinks": len(linksDetails),
                 "MetaTitle": metaData['title'],
                 "MetaUrl": metaData['url'],
