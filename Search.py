@@ -8,6 +8,7 @@ stringCount = []
 Client = MongoClient()
 db = Client["W3"]
 linkData = db["linkData"]
+
 i = 0
 for res in linkData.find():
     texts = res["Contents"]
@@ -15,11 +16,13 @@ for res in linkData.find():
     matching = [s for s in texts if any(xs in s for xs in query)]
     i+=1
     stringCount.append({
-        'index': 1,
         'URL': res["URL"],
         'Count': len(matching)
         })
-for i in stringCount:
-    print i['Count']
 
-#webbrowser.open_new_tab("XXX")
+maxx = max([i['Count'] for i in stringCount])
+
+for link in stringCount:
+    if link['Count']==maxx:
+        #print link['URL']
+        webbrowser.open_new_tab(link['URL'])
