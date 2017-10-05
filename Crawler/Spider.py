@@ -61,11 +61,11 @@ class spider(object):
 
         keyw = "null"
         descr = "null"
-        if (meta.get('meta').get('keywords')):
-            keyw = meta['meta']['keywords'].split(', ')
+        if (meta.get('meta').get('Keywords')):
+            keyw = meta['meta']['Keywords'].split(', ')
 
-        if (meta.get('meta').get('description')):
-            descr = meta['meta']['description']
+        if (meta.get('meta').get('Description')):
+            descr = meta['meta']['Description']
 
         self.Meta = {
             'title': meta['page']['title'],
