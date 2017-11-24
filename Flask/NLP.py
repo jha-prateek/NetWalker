@@ -4,7 +4,7 @@ from nltk.tokenize import PunktSentenceTokenizer
 import sys
 #sys.path.append('C:\Users\prate\PycharmProjects\NetWalker\Flask')
 #from zxc import *
-sample="Vipul is a rough guy"
+sample="Saurabh has to go to banglore"
 class nlp(object):
 
 
@@ -40,7 +40,7 @@ class nlp(object):
 					x="abc"
 				if i=="Chunk":
 					x="Chunk"
-			return res
+			return nltk.word_tokenize(res)
 			#pes = nltk.word_tokenize(res)
 			#print pes		
 			#return res

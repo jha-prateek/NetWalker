@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        body {
+            background-color: #c8e6c9;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .search {
+            width: 100%;
+            background-color: white;
+        }
+
+        .searchTerm {
+            float: left;
+            width: 100%;
+            border: 3px solid #00B4CC;
+            padding: 5px;
+            height: 36px;
+            border-radius: 5px;
+            text-decoration-color: black;
+        }
+
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            position: absolute;
+            right: -50px;
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        /*Resize the wrap to see the search bar change!*/
+
+        .wrap {
+            width: 30%;
+            position: absolute;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main {
+            background-color: #c8e6c9;
+            padding: 30px;
+        }
+
+        .nav {
+            background-color: #004d40;
+        }
+
+        main.a:hover {
+    background-color: yellow;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+
+            <img src="1.png" height="10%" width="15%" />
+            <br>
+            <div class="wrap">
+
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                    <button type="submit" class="searchButton">
+                            <i class="material-icons">search</i>
+                      </button>
+                </div>
+
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col s12 m8 l8">
+                <div class="main">
+                        {%for el in tfr%}
+                            <a href="{{el[0]}}">
+                            <div class="tab">
+                            <h3>{{el[0]}}</h3>
+                            </div>
+                            </a>
+                            <br>
+                            <hr>
+                        {%endfor%}
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+

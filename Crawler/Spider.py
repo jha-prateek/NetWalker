@@ -6,10 +6,6 @@ from lxml import etree
 import requests
 
 
-"""
-        Developed by: Prateek Jha, 15 May 2017
-"""
-
 class spider(object):
     CurLink = ""
     linkURI = []
@@ -27,7 +23,6 @@ class spider(object):
         self.html = urlopen(self.CurLink).read()
         self.bs = BeautifulSoup(self.html, "lxml")
 
-        # Getting only texts
         for script in self.bs(["script", "style"]):
             script.extract()
         text = self.bs.get_text()
@@ -35,7 +30,7 @@ class spider(object):
         chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
         for chunk in chunks:
             if chunk:
-                self.texts.append(chunk.lower())
+                self.texts.append(chunk)
 
         # site = urlparse.urlsplit(self.CurLink).scheme + "://" + urlparse.urlsplit(self.CurLink).netloc + "/sitemap.aspx"
         # r = requests.get(site)

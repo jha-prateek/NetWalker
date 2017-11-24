@@ -1,6 +1,6 @@
-import Flaskinp
-ctx = Flaskinp.app.test_request_context('/', method='POST')
+import front_end_old
+ctx = front_end_old.app.test_request_context('/', method='POST')
 ctx.push()
-Flaskinp.my
-Flaskinp.my_form_post()
+front_end_old.my
+front_end_old.my_form_post()
 

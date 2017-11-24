@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:400);
 
 .webdesigntuts-workshop {
-    background-image: url({{ url_for('static', filename='static/vipulb.jpg') }})
+    background: #151515;
 	height: 100%;
 	position: absolute;
 	text-align: center;

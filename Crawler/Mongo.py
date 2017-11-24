@@ -1,8 +1,5 @@
 from pymongo import MongoClient
 
-"""
-        Developed by: Prateek Jha, 15 May 2017
-"""
 
 class Database(object):
 
@@ -23,10 +20,11 @@ class Database(object):
                           "URL": i}
                 self.linkList.insert_one(linksD)
 
-        post = {"URL": metaData['url'],
+        post = {"URL": curURL,
                 "Contents": texts,
                 "TotaLinks": len(linksDetails),
                 "MetaTitle": metaData['title'],
+                "MetaUrl": metaData['url'],
                 "MetaDesc": metaData['description'],
                 "MetaKeywords": metaData['keyword'],
                 "Anchors": linksDetails
